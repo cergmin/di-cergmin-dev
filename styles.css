@@ -19,6 +19,6 @@ p {
 }
 
 .confirmationCode {
-  color: #ff4d4d;
+  color: hsl(0deg 95% 45%);
   font-weight: 700;
 }
