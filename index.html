@@ -17,5 +17,26 @@
         https://market.yandex.ru/?clid=4032372
       </span>
     </p>
+    <p id="displayMode">
+      
+    </p>
+    <script>
+      const displayModeOutput = document.getElementById('displayMode');
+      let displayMode = 'browser';
+
+      if (navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
+        displayMode = 'standalone';
+      }
+
+      if (window.matchMedia('(display-mode: fullscreen)').matches) {
+        displayMode = 'fullscreen';
+      }
+
+      if (window.matchMedia('(display-mode: minimal-ui)').matches) {
+        displayMode = 'minimal-ui';
+      }
+
+      displayModeOutput.innerHTML = `Display mode: ${displayMode}`;
+    </script>
   </body>
 </html>
